@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+			*{ margin:0; padding:0;}
+			b,strong{ font-weight:normal;}
+			i,em{ font-style:normal;}
+			ul,ol,li{ list-style:none;}
+			a,u{ text-decoration:none;}
+			h1,h2,h3,h4,h5,h6{ font-size:16px; font-weight:normal;}
+			#zhu{width: 1423px;height: 1179px;background:#efefef;margin: 0 auto}
+			.main{width: 1000px;margin: 0 auto}
+			#zhu .top{height: 130px;padding-top: 45px;box-sizing:border-box}
+			#zhu .top .zhang{background: url(images/tubiao.png) no-repeat left;height: 35px;font-size: 24px;line-height: 35px;color: #333;text-indent: 77px;margin-bottom: 50px;}
+			#zhu .top .zhang a{color: #333}
+			#zhu .top .zhang span{float: right;font-size: 16px;color: #666}
+			#zhu .top .zhang span b a{color: #ca5252}
+			#zhu .top .zhang span b a:hover{color: #333}
+			#zhu .cen{margin-bottom: 31px;height: 943px;background: #fff;padding-top: 44px;box-sizing:border-box;}
+			#zhu .cen .up{margin-bottom: 36px;width: 320px;height: 40px;margin-left: 340px;}
+			#zhu .cen .up li{cursor: pointer;float: left;width: 158px;height: 38px;line-height: 38px;font-size: 14px;text-align: center;}
+			#zhu .cen .lef{width: 340px;height: 608px;float: left;}
+			#zhu .cen .lef li{width: 340px;height: 45px;margin-bottom: 26px;font-size: 14px;line-height: 45px;color: #333}
+			#zhu .cen .lef li span{float: right;}
+			#zhu .cen .zhong{width: 324px;height: 608px;float: left;position: relative;}
+			#zhu .cen .zhong input{display: block;width: 324px;height: 43px;margin-bottom: 26px;border:1px solid #666;outline: none;text-indent: 10px;color: #bdbdbd;line-height: 43px;}
+			#zhu .cen .zhong .deng{width: 121px;height: 46px;line-height: 46px;text-align: center;font-size: 15px;color: #fff;background: #c6e3f9;position: absolute;right: 0px;bottom: 234px;}
+			#zhu .cen .zhong .zhu2{width: 324px;height: 46px;line-height: 46px;font-size: 16px;color: #fff;text-align: center;background: #df9797;margin-bottom: 7px;}
+			#zhu .cen .zhong .yanzheng{width: 324px;height: 50px;font-size: 16px;line-height: 50px;text-align: center;}
+			#zhu .cen .rig{width: 336px;height: 608px;float: left;position: relative;}
+			#zhu .cen .rig li{width: 336px;height: 45px;margin-bottom: 26px;font-size: 14px;line-height: 45px;color: #333;text-indent: 45px;position: relative;}
+			#zhu .cen .rig li img{position: absolute;left:22px;top:16px;}
+			#zhu .bot{height: 36px;text-align: center}
+			#zhu .bot h1{font-size: 11px;color: #beb1b1;margin-bottom: 12px;cursor: pointer;}
+			#zhu .bot h2{font-size: 11px;color: #beb1b1}
+			#zhu .bot h1 span:hover{color: orange}
+			
+
+
+
+	</style>
+</head>
+<body>
+	<div id="zhu">
+		<div class="main">
+			<div class="top">
+				<div class="zhang"><a href="">邮箱账号</a><span>已有账号？去<b id="denglu1" style="cursor: pointer;"><a href="index2.html" target="blank">登录</a></b></span></div>
+			</div>
+			<div class="cen">
+				<ul class="up">
+					<li style="background: #ca5252;border:1px solid #ca5252;color: #fff">普通账号注册</li>
+					<li style="background: #fff;border:1px solid #ccc;color: #666">靓号注册</li>
+				</ul>
+				<ul class="lef">
+					<li><span>账号：</span></li>
+					<li><span>密码：</span></li>
+					<li><span>确认密码：</span></li>
+					<li style="margin-bottom: 70px;"><span>手机号：</span></li>
+					<li><span>短信验证码：</span></li>
+				</ul>
+				<div class="zhong">
+					<input type="text" id="tex1" placeholder="网易邮箱/其他账号">
+					<input type="password" id="tex2" placeholder="6-16位密码，区分大小写">
+					<input type="password" id="tex3" placeholder="再次输入密码">
+					<input type="text" id="tex4" style="margin-bottom: 70px;" placeholder="11位手机号">
+					<input type="text" id="tex5" placeholder="输入短信验证码" style="width: 190px;height: 44px;margin-bottom:0px">
+					<h1 style="position: absolute;top: 272px;left: 0;font-size: 11px;line-height: 11px;width: 85px;color: #94dcff">切换至国际手机</h1>
+					<h2 style="position: absolute;top: 300px;left: 0;font-size: 11px;line-height: 11px;width: 205px;color: #999">忘记密码时，可通过手机快速找回密码</h2>
+					<div class="deng" id="btn" style="cursor: pointer;">获取验证码</div>
+					<div class="yanzheng" id="zhuce2"></div>
+					<div class="zhu2" id="zhucele" style="cursor: pointer;">注册并登录</div>
+					<h3 style="line-height: 22px;font-size: 11px;color: #c2b8cb;text-indent: 25px;">用户勾选即代表同意《网易邮箱服务条款》和《网易隐私政策》</h3>
+				</div>
+				<ul class="rig" id="rig_li">
+					<li class="lis"></li>
+					<li class="lis"></li>
+					<li class="lis"></li>
+					<li style="margin-bottom: 70px;" class="lis"></li>
+					<li class="lis"></li>
+					
+				</ul>
+				<img src="images/xiazai.png" alt="" style="margin-left: 50px;">
+			</div>
+			<div class="bot"><h1><span>About NetEase</span>-<span>公司简介</span>-<span>联系方式</span>-<span>OAuth2.0认证</span>-<span>招聘信息</span>-<span>客户服务</span>-<span>相关法律</span>-<span>网络营销</span></h1><h2>网易公司版权所有 ©1997-2018</h2></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+		var list=document.getElementsByClassName("lis")
+		var a=["t","t","t","t","t"]
+		tex1.onkeyup=function(){
+			var tex11=tex1.value
+			var reg1=/^[A-z0-9]{6,18}$/
+			if(reg1.test(tex11)){
+				list[0].innerHTML=`<img src="images/gou.png" alt="" />`
+				a[0]="f"
+			}else{
+				list[0].innerHTML=`普通帐号须由6-18个字符组成<img src="images/cha.png" alt="" class="i3">`
+				a[0]="t"
+			}
+			if(tex1.value===""){
+				list[0].innerHTML=""
+			}
+		}
+		tex2.onkeyup=function(){
+			var tex22=tex2.value;
+			var reg2=/^[A-z0-9]{6,16}$/
+			if(reg2.test(tex22)){
+				list[1].innerHTML=`<img src="images/gou.png" alt="" />`
+				a[1]="f"
+			}else{
+				list[1].innerHTML=`密码须由6-16个字符组成，区分大小写<img src="images/cha.png" alt="" class="i3">`
+				a[1]="t"
+			}
+			if(tex2.value===""){
+				list[1].innerHTML=""
+			}
+		}
+		tex3.onkeyup=function(){
+			
+			var tex33=tex3.value
+			console.log(tex33)
+			if(tex2.value==tex33){
+				list[2].innerHTML=`<img src="images/gou.png" alt="" />`
+				a[2]="f"
+			}else{
+				list[2].innerHTML=`密码不一致<img src="images/cha.png" alt="" class="i3">`
+				a[2]="t"
+			}
+			if(tex3.value===""){
+				list[2].innerHTML=""
+			}
+		}
+		tex4.onkeyup=function(){
+			var tex44=tex4.value;
+			var reg4=/^[0-9]{11}$/
+			if(reg4.test(tex44)){
+				list[3].innerHTML=`<img src="images/gou.png" alt="" />`
+				a[3]="f"
+			}else{
+				list[3].innerHTML=`请输入正确的手机号<img src="images/cha.png" alt="" class="i3">`
+				a[3]="t"
+			}
+			if(tex4.value===""){
+				list[3].innerHTML=""
+			}
+		}
+
+		var arr="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+		var arr1=arr.split("");
+		
+		btn.onclick=function(){
+			var zheng=""
+			for(var i=0;i<4;i++){
+				
+				zheng+=arr1[parseInt(Math.random()*arr1.length)]
+		}
+			zhuce2.innerHTML=zheng
+		}
+		tex5.onkeyup=function(){
+			var tex55=tex5.value
+			if(zhuce2.innerHTML===tex55){
+				list[4].innerHTML=`<img src="images/gou.png" alt="" />`
+				a[4]="f"
+			}else{
+				list[4].innerHTML=`验证码不正确<img src="images/cha.png" alt="" class="i3">`
+				a[4]="t"
+			}
+			if(tex5.value===""){
+				list[4].innerHTML=""
+			}
+		}
+		zhucele.onclick=function(){
+			for(var i=0;i<a.length;i++){
+				if(a[i]==="t"){
+					alert("注册失败")
+					return
+				}
+			}
+			window.location.href="http://localhost/website/index.html"
+		}
+		
+</script>
